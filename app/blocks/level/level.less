@@ -1,0 +1,91 @@
+@media only screen and (min-width : 0) {
+
+    .level {
+        &__head {
+            margin-top: 8px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+            &-title {
+                width: 25%;
+                font-size: 13px;
+                font-family: 'PT Sans';
+                font-weight: 600;
+                color: @brown;
+
+                &:nth-child(1) {
+                    width: 19%;
+                }
+
+                &:nth-child(2) {
+                    width: 29.5%;
+                }
+
+                &:nth-child(3) {
+                    width: 22.5%;
+                    text-align: left;
+                }
+
+                &:nth-child(4) {
+                    width: 29%;
+                    text-align: right;
+                }
+
+            }
+        }
+
+    }
+
+    .slider {
+        width: 99.9%;
+        position: relative;
+        border: 0 !important;
+        height: 26px !important;
+        background: url('../img/slider.png') no-repeat left !important;
+    }
+
+    .ui-state-default {
+        outline: none;
+        top: -17px !important;
+        border: 0 !important;
+        right: 0;
+        background: url('../img/arrow.png') no-repeat -1px 0 !important;
+        width: 20px !important;
+        height: 30px;
+        position: absolute;
+        //z-index: 2;
+        cursor: default;
+        -ms-touch-action: none;
+        touch-action: none;
+    }
+
+}
+
+@media only screen and (min-width : 0) and (max-width : @desktop) {
+
+    .level__head {
+        margin-top: -10px;
+    }
+
+    .slider {
+        width: 99.9%;
+        position: relative;
+        height: 26px;
+        background: 0 !important;
+    }
+
+    .ui-state-default {
+        outline: none;
+        top: -15px;
+        background: url('../img/arrow.png') no-repeat 14px 0 !important;
+        width: 25% !important;
+        height: 30px;
+        position: absolute;
+        z-index: 2;
+        cursor: default;
+        -ms-touch-action: none;
+        touch-action: none;
+    }
+
+}

@@ -1,0 +1,17 @@
+mixin skills(data)
+    - data = data || {};
+    ul.skills(class = data.skills)
+        each skills in data.items
+            li.skills__item
+                .skills__item-label
+                    input.skills__item-checkbox(type="checkbox", id = skills.id)
+                    label.skills__item-title(for = skills.id)!=skills.title
+                    
+mixin plan(data)
+    - data = data || {};
+    ul.plan(class = data.class)
+        each plan in data.items
+            li.plan__item
+                .plan__item-label
+                    input.plan__item-radio(type="radio", id = plan.id)
+                    label.plan__item-title(for = plan.id)!=plan.title

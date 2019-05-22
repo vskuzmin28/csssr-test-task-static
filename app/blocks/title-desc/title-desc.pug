@@ -1,0 +1,5 @@
+mixin title-desc(data)
+    - data = data || {};
+    .title-desc(class = data.class)
+        .title-desc__title!=data.title
+        .title-desc__description!=data.description

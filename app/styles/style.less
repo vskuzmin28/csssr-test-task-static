@@ -1,0 +1,170 @@
+// normalize
+
+@import '../styles/normalize.css';
+
+// fonts & variables
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext');
+
+@import '../styles/fonts.css';
+@import '../styles/helpers/variables.less';
+@import '../styles/helpers/sprite.less';
+
+// SETTINGS //
+
+a {
+  cursor: pointer;
+  color: @orange;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
+// animation
+
+a, a:hover {
+	transition: all 0.5s ease-in-out !important;
+}
+
+// body
+
+body {
+  background: #E5E5E5;
+	cursor: default;
+  overflow-x: hidden !important;
+}
+
+// selection
+
+body *::-moz-selection {
+  background: @yellow;
+  color: @black;
+}
+
+body *::-webkit-selection {
+  background: @yellow;
+  color: @black;
+}
+
+body *::selection {
+  background: @yellow;
+  color: @black;
+}
+
+// inputs
+
+input[type=checkbox], input[type=radio] {display: none;}
+
+input[type=checkbox] + label:before {
+    content: "";
+    color: transparent;
+    display: inline-block;
+    background: url('../img/checkbox.png') no-repeat 0 6px;
+    font-size: 20px;    
+    line-height: 22px;
+    margin: 7px 5px 0 0;
+    height: 38px;
+    width: 28px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+}
+
+input[type=checkbox]:checked + label:before {
+  background: url('../img/checkbox-checked2.png') no-repeat 0 -3px;
+  z-index: 10;
+}
+
+input[type=radio] + label:before {
+    display: inline-block;
+    background: url('../img/radio.png') no-repeat;
+    font-size: 20px;    
+    line-height: 20px;
+    content: "";
+    height: 28px;
+    width: 28px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0;    
+    transition: font-size ease .3s;
+}
+input[type=radio]:checked + label:before {
+  background: url('../img/radio-checked.png') no-repeat;
+  z-index: 10;   
+}
+
+// link
+
+.link {
+  color: @blue;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+@media only screen and (min-width : 0) {
+
+  .document {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: @grey;
+    height: 100%;
+
+    &__container {
+      padding: 62px 117px 74px 113px;
+      width: 770px;
+      background: url('../img/patern.jpg');
+    }
+
+    &__header {
+      margin-bottom: 48px;
+    }
+
+    &__main-info {
+      margin-bottom: 60px;
+    }
+
+    &__list-body {
+      margin-top: 24px;
+      margin-bottom: 62px;
+    }
+
+    &__plan {
+      margin-top: 14px !important;
+    }
+
+    &__about {
+      margin: 12px 0 52px 0;
+    }
+
+    &__level {
+      margin: 20px 0 40px 0;
+    }
+
+    &__date {
+      margin-top: 50px;
+    }
+
+  }
+
+}
+
+@media only screen and (min-width : 300px) and (max-width : @desktop) {
+
+  .document {
+    width: 100%;
+
+    &__container {
+      padding: 0 5%;
+      padding-bottom: 40px;
+      margin: 0 auto;
+      width: 90%;
+    }
+
+  }
+
+}

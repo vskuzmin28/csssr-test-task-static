@@ -1,0 +1,501 @@
+@import '../styles/normalize.css';
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext');
+@import '../styles/fonts.css';
+a {
+  cursor: pointer;
+  color: #F47821;
+  font-weight: 500;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a,
+a:hover {
+  transition: all 0.5s ease-in-out !important;
+}
+body {
+  background: #E5E5E5;
+  cursor: default;
+  overflow-x: hidden !important;
+}
+body *::-moz-selection {
+  background: #dfb265;
+  color: #161616;
+}
+body *::-webkit-selection {
+  background: #dfb265;
+  color: #161616;
+}
+body *::selection {
+  background: #dfb265;
+  color: #161616;
+}
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+input[type=checkbox] + label:before {
+  content: "";
+  color: transparent;
+  display: inline-block;
+  background: url('../img/checkbox.png') no-repeat 0 6px;
+  font-size: 20px;
+  line-height: 22px;
+  margin: 7px 5px 0 0;
+  height: 38px;
+  width: 28px;
+  text-align: center;
+  vertical-align: middle;
+  transition: color ease .3s;
+}
+input[type=checkbox]:checked + label:before {
+  background: url('../img/checkbox-checked2.png') no-repeat 0 -3px;
+  z-index: 10;
+}
+input[type=radio] + label:before {
+  display: inline-block;
+  background: url('../img/radio.png') no-repeat;
+  font-size: 20px;
+  line-height: 20px;
+  content: "";
+  height: 28px;
+  width: 28px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0;
+  transition: font-size ease 0.3s;
+}
+input[type=radio]:checked + label:before {
+  background: url('../img/radio-checked.png') no-repeat;
+  z-index: 10;
+}
+.link {
+  color: #1f5f97;
+  text-decoration: underline;
+  font-weight: 600;
+}
+@media only screen and (min-width: 0) {
+  .document {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #797979;
+    height: 100%;
+  }
+  .document__container {
+    padding: 62px 117px 74px 113px;
+    width: 770px;
+    background: url('../img/patern.jpg');
+  }
+  .document__header {
+    margin-bottom: 48px;
+  }
+  .document__main-info {
+    margin-bottom: 60px;
+  }
+  .document__list-body {
+    margin-top: 24px;
+    margin-bottom: 62px;
+  }
+  .document__plan {
+    margin-top: 14px !important;
+  }
+  .document__about {
+    margin: 12px 0 52px 0;
+  }
+  .document__level {
+    margin: 20px 0 40px 0;
+  }
+  .document__date {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+  .document {
+    width: 100%;
+  }
+  .document__container {
+    padding: 0 5%;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 0) {
+  .about {
+    padding: 0 !important;
+    background: 0;
+  }
+  .about__textarea {
+    padding: 0 3px;
+    width: 100%;
+    min-height: 174px;
+    height: auto;
+    background: url('../img/textarea.png') repeat-y;
+    resize: none;
+    border: 0;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 27px;
+    line-height: 62px;
+    color: #231f20;
+  }
+}
+@media only screen and (min-width: 0) {
+  .header {
+    position: relative;
+    height: 52px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .header__secret {
+    position: absolute;
+    right: -64px;
+    top: -14px;
+  }
+  .header__logo {
+    display: block;
+  }
+  .header__logo img {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+  .secret {
+    width: 252px;
+    height: 106px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 1000px) {
+  .header {
+    position: relative;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+  }
+  .header__secret {
+    display: none;
+    top: 0;
+    right: 0;
+  }
+  .header__logo {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: block;
+  }
+  .header__logo img {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 0) {
+  .level__head {
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .level__head-title {
+    width: 25%;
+    font-size: 13px;
+    font-family: 'PT Sans';
+    font-weight: 600;
+    color: #2f1b15;
+  }
+  .level__head-title:nth-child(1) {
+    width: 19%;
+  }
+  .level__head-title:nth-child(2) {
+    width: 29.5%;
+  }
+  .level__head-title:nth-child(3) {
+    width: 22.5%;
+    text-align: left;
+  }
+  .level__head-title:nth-child(4) {
+    width: 29%;
+    text-align: right;
+  }
+  .slider {
+    width: 99.9%;
+    position: relative;
+    border: 0 !important;
+    height: 26px !important;
+    background: url('../img/slider.png') no-repeat left !important;
+  }
+  .ui-state-default {
+    outline: none;
+    top: -17px !important;
+    border: 0 !important;
+    right: 0;
+    background: url('../img/arrow.png') no-repeat -1px 0 !important;
+    width: 20px !important;
+    height: 30px;
+    position: absolute;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 1000px) {
+  .level__head {
+    margin-top: -10px;
+  }
+  .slider {
+    width: 99.9%;
+    position: relative;
+    height: 26px;
+    background: 0 !important;
+  }
+  .ui-state-default {
+    outline: none;
+    top: -15px;
+    background: url('../img/arrow.png') no-repeat 14px 0 !important;
+    width: 25% !important;
+    height: 30px;
+    position: absolute;
+    z-index: 2;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+  }
+}
+@media only screen and (min-width: 0) {
+  .main-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main-info__case {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: block;
+    width: 218px;
+    height: 118px;
+  }
+  .main-info__item {
+    margin-bottom: 16px;
+    height: 46px;
+    display: inline-flex;
+    flex-direction: row;
+  }
+  .main-info__item-title {
+    margin-right: 16px;
+    height: 46px;
+    display: flex;
+    white-space: nowrap;
+    font-size: 21px;
+    font-family: 'PT Sans', sans-serif;
+    text-align: left;
+    font-weight: 600;
+    align-items: flex-start;
+    line-height: 65px;
+    color: #2f1b15;
+  }
+  .main-info__item-input {
+    padding: 0 15px 2px 15px;
+    border: 0;
+    display: flex;
+    width: 100%;
+    height: 46px;
+    background: url('../img/hr.png') no-repeat bottom;
+    outline: none;
+    font-size: 32px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .main-info__item-input_small {
+    min-width: 160px;
+    width: 140px;
+    max-width: 200px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 1000px) {
+  .main-info__item {
+    margin-bottom: 36px;
+    flex-direction: column;
+  }
+  .main-info__item-title {
+    font-size: 18px;
+  }
+  .main-info__item-input {
+    font-size: 21px;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 0) {
+  .list-body {
+    display: flex;
+    flex-direction: row;
+  }
+  .skills {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 33.3%;
+    flex-direction: column;
+  }
+  .skills__item {
+    margin-bottom: 8px;
+    width: 100%;
+    height: 28px;
+  }
+  .skills__item-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .skills__item-checkbox {
+    margin-right: 8px;
+  }
+  .skills__item-title {
+    font-size: 21px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    color: #161616;
+  }
+  .plan {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+  }
+  .plan__item {
+    margin-right: 20px;
+    margin-bottom: 8px;
+    width: auto;
+    height: 28px;
+  }
+  .plan__item-label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .plan__item-radio {
+    width: 28px;
+    display: block;
+    margin-right: 8px;
+  }
+  .plan__item-title {
+    font-size: 21px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    color: #161616;
+  }
+  .plan__item-title::before {
+    padding-top: 2px;
+    margin-right: 8px;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 1000px) {
+  .list-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .skills {
+    width: 100%;
+  }
+  .skills__item-title {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1000px) {
+  .list-body {
+    display: flex;
+    flex-direction: row;
+  }
+  .skills {
+    width: 33.3%;
+  }
+  .skills__item-title {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 0) {
+  .title-desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .title-desc__title {
+    margin-bottom: 14px;
+    font-size: 25px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    color: #2f1b15;
+  }
+  .title-desc__description {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    color: #3d3d3d;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 1000px) {
+  .title-desc__title {
+    margin-bottom: 14px;
+    font-size: 22px;
+  }
+  .title-desc__description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/

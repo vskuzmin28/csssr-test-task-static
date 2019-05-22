@@ -1,0 +1,64 @@
+@media only screen and (min-width : 0) {
+
+    .header {
+        position: relative;
+        height: 52px;
+        display: flex;
+        justify-content: flex-start;
+
+        &__secret {
+            position: absolute;
+            right: -64px;
+            top: -14px;
+        }
+
+        &__logo {
+            display: block;
+
+            img {
+                display: block;
+                width: auto;
+                height: auto;
+            }
+
+        }
+
+    }
+
+    .secret {
+        width: 252px;
+        height: 106px;
+    }
+
+}
+
+@media only screen and (min-width : 0) and (max-width : @desktop) {
+
+    .header {
+        position: relative;
+        height: 52px;
+        display: flex;
+        justify-content: center;
+
+        &__secret {
+            display: none;
+            top: 0;
+            right: 0;
+        }
+
+        &__logo {
+            margin-top: 30px;
+            margin-bottom: 40px;
+            display: block;
+
+            img {
+                display: block;
+                width: auto;
+                height: auto;
+            }
+
+        }
+
+    }
+
+}

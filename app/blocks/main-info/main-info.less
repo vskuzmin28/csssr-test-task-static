@@ -1,0 +1,83 @@
+@media only screen and (min-width : 0) {
+
+    .main-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__case {
+            margin: 0 auto;
+            margin-bottom: 50px;
+            display: block;
+            width: 218px;
+            height: 118px;
+        }
+
+        &__item {
+            margin-bottom: 16px;
+            height: 46px;
+            display: inline-flex;
+            flex-direction: row;
+
+            &-title {
+                margin-right: 16px;
+                height: 46px;
+                display: flex;
+                white-space: nowrap;
+                font-size: 21px;
+                font-family: 'PT Sans', sans-serif;
+                text-align: left;
+                font-weight: 600;
+                align-items: flex-start;
+                line-height: 65px;
+                color: @brown;
+            }
+
+            &-input {
+                padding: 0 15px 2px 15px;
+                border: 0;
+                display: flex;
+                width: 100%;
+                height: 46px;
+                background: url('../img/hr.png') no-repeat bottom;
+                outline: none;
+                font-size: 32px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+        }
+
+    }
+    
+    .main-info__item-input_small {
+        min-width: 160px;
+        width: 140px;
+        max-width: 200px;
+    }
+
+}
+
+@media only screen and (min-width : 0) and (max-width : @desktop) {
+
+    .main-info {
+
+        &__item {
+            margin-bottom: 36px;
+            flex-direction: column;
+
+            &-title {
+                font-size: 18px;
+            }
+
+            &-input {
+                font-size: 21px;
+                padding: 0;
+                padding-bottom: 10px;
+            }
+
+        }
+
+    }
+
+}

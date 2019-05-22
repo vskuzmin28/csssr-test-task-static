@@ -1,0 +1,16 @@
+mixin main-info(data, info)
+    - data = data || {};
+    .main-info(class = data.class)
+        img.main-info__case(src = data.src, alt = data.alt)
+        each info in data.items
+            .main-info__item 
+                .main-info__item-title!=info.title
+                input.main-info__item-input(type = info.type, value = info.value)
+
+mixin date-completion(data, date)
+    - data = data || {};
+    .main-info(class = data.class)
+        each date in data.items
+            .main-info__item 
+                .main-info__item-title!=date.title
+                input.main-info__item-input.main-info__item-input_small(type = date.type, value = date.value)

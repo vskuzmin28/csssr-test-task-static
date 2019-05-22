@@ -1,0 +1,4 @@
+mixin about(data)
+    - data = data || {};
+    .about(class = data.class)
+        textarea.about__textarea!=data.text

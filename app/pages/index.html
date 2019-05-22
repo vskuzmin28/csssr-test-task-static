@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#F47821"/>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png"/>
+    <!--link(rel="icon" type="image/png" href="../img/favicons/16x16.png" sizes="16x16")-->
+    <!--link(rel="icon" type="image/png" href="../img/favicons/32x32.png" sizes="32x32")-->
+    <!--link(rel="icon" type="image/png" href="../img/favicons/96x96.png" sizes="96x96")-->
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" href="../styles/normalize.css"/>
+    <link rel="stylesheet" href="../styles/animate.css"/>
+    <link rel="stylesheet" href="../styles/style.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--if lt IE 9-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  </head>
+  <body>
+    <!-- document-->
+    <div class="document">
+      <div class="document__container">
+        <!-- header-->
+        <div class="header document__header"><a class="header__logo" title="Тестовое задание Кузьмин В.С."><img src="../img/logo.png"/></a><img class="header__secret secret" src="../img/secret.png" alt="@@"/></div>
+        <!-- main info-->
+        <div class="main-info document__main-info"><img class="main-info__case" src="../img/case.png"/>
+          <div class="main-info__item"> 
+            <div class="main-info__item-title">Полное ФИО</div>
+            <input class="main-info__item-input" type="text" value="Кузьмин Виталий Сергеевич"/>
+          </div>
+          <div class="main-info__item"> 
+            <div class="main-info__item-title">Год рождения</div>
+            <input class="main-info__item-input" type="text" value="28.02.1995"/>
+          </div>
+          <div class="main-info__item"> 
+            <div class="main-info__item-title">Место жительства</div>
+            <input class="main-info__item-input" type="text" value="г. Сызрань"/>
+          </div>
+          <div class="main-info__item"> 
+            <div class="main-info__item-title">Скайп</div>
+            <input class="main-info__item-input" type="text" value="vskuzmin28"/>
+          </div>
+          <div class="main-info__item"> 
+            <div class="main-info__item-title">Почта</div>
+            <input class="main-info__item-input" type="email" value="vskuzmin28@gmail.com"/>
+          </div>
+        </div>
+        <!-- title & description-->
+        <div class="title-desc document__title-desc">
+          <div class="title-desc__title">Расскажите о себе чекбоксами</div>
+          <div class="title-desc__description">Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.</div>
+        </div>
+        <!-- skills-->
+        <div class="list-body document__list-body">
+          <ul class="skills">
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check1"/>
+                <label class="skills__item-title" for="check1">БЭМ/OOCSS</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check2"/>
+                <label class="skills__item-title" for="check2">Pug (Jade)</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check3"/>
+                <label class="skills__item-title" for="check3">Stylus/LESS/SASS</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check4"/>
+                <label class="skills__item-title" for="check4">Работаю с SVG</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check5"/>
+                <label class="skills__item-title" for="check5">Верстаю семантично</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check6"/>
+                <label class="skills__item-title" for="check6">Accessibility (A11Y)</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check7"/>
+                <label class="skills__item-title" for="check7">ES2015/ES2016</label>
+              </div>
+            </li>
+          </ul>
+          <ul class="skills">
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check8"/>
+                <label class="skills__item-title" for="check8">Webpack</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check9"/>
+                <label class="skills__item-title" for="check9">Дружу с WebGL</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check10"/>
+                <label class="skills__item-title" for="check10">jQuery</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check11"/>
+                <label class="skills__item-title" for="check11">Знаю/изучаю Angular</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check12"/>
+                <label class="skills__item-title" for="check12">Знаю/изучаю React</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check13"/>
+                <label class="skills__item-title" for="check13">Знаю/изучаю Node.js</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check14"/>
+                <label class="skills__item-title" for="check14">Использую Git</label>
+              </div>
+            </li>
+          </ul>
+          <ul class="skills">
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check15"/>
+                <label class="skills__item-title" for="check15">С глазомером всё ок</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check16"/>
+                <label class="skills__item-title" for="check16">Читаю <a class="link" href="#" title="">blog.csssr.ru</a></label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check17"/>
+                <label class="skills__item-title" for="check17">Я ленивый(-ая)</label>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-label">
+                <input class="skills__item-checkbox" type="checkbox" id="check18"/>
+                <label class="skills__item-title" for="check18">У меня хороший английский</label>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- title & description-->
+        <div class="title-desc document__title-desc">
+          <div class="title-desc__title">Уровень владения JavaScript</div>
+          <div class="title-desc__description"></div>
+        </div>
+        <!-- level-->
+        <div class="level document__level">
+          <div class="level__slider slider"></div>
+          <div class="level__head">
+            <div class="level__head-title">Не владею</div>
+            <div class="level__head-title">Использую готовые решения</div>
+            <div class="level__head-title">Использую готовые решения и умею их переделывать</div>
+            <div class="level__head-title">Пишу сложный JS с нуля</div>
+          </div>
+        </div>
+        <!-- title & description-->
+        <div class="title-desc document__title-desc">
+          <div class="title-desc__title">Расскажите о себе словами</div>
+          <div class="title-desc__description">Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.</div>
+        </div>
+        <div class="about document__about">
+          <textarea class="about__textarea">Привлекла интересная работа</textarea>
+        </div>
+        <!-- title & description-->
+        <div class="title-desc document__title-desc">
+          <div class="title-desc__title">Какие у вас планы на будущее?</div>
+          <div class="title-desc__description">Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.</div>
+        </div>
+        <!-- plan-->
+        <ul class="plan document__plan">
+          <li class="plan__item">
+            <div class="plan__item-label">
+              <input class="plan__item-radio" type="radio" id="radio1"/>
+              <label class="plan__item-title" for="radio1">Верстать</label>
+            </div>
+          </li>
+          <li class="plan__item">
+            <div class="plan__item-label">
+              <input class="plan__item-radio" type="radio" id="radio2"/>
+              <label class="plan__item-title" for="radio2">Прокачиваться в JS</label>
+            </div>
+          </li>
+          <li class="plan__item">
+            <div class="plan__item-label">
+              <input class="plan__item-radio" type="radio" id="radio3"/>
+              <label class="plan__item-title" for="radio3">Менеджерство</label>
+            </div>
+          </li>
+          <li class="plan__item">
+            <div class="plan__item-label">
+              <input class="plan__item-radio" type="radio" id="radio4"/>
+              <label class="plan__item-title" for="radio4">Другое</label>
+            </div>
+          </li>
+        </ul>
+        <!-- date completion-->
+        <div class="main-info document__date">
+          <div class="main-info__item"> 
+            <div class="main-info__item-title">Дата заполнения</div>
+            <input class="main-info__item-input main-info__item-input_small" type="text" value="15.05.19"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- scripts-->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

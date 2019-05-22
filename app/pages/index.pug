@@ -1,0 +1,131 @@
+include ../blocks/head/head.pug
+include ../blocks/header/header.pug
+include ../blocks/main-info/main-info.pug
+include ../blocks/title-desc/title-desc.pug
+include ../blocks/skills/skills.pug
+include ../blocks/about/about.pug
+include ../blocks/level/level.pug
+
+doctype html
+html(lang='ru')
+  +head({
+    title: 'Тестовое задание'
+  })
+  body
+    // document
+    .document
+      .document__container
+        // header
+        +header({
+          class: 'document__header', href: '#', src: '../img/logo.png', title: 'Тестовое задание Кузьмин В.С.'
+        })
+        // main info
+        +main-info({
+          class: 'document__main-info',
+          src: '../img/case.png',
+          items: [
+            {title: 'Полное ФИО', value: 'Кузьмин Виталий Сергеевич', type: 'text'},
+            {title: 'Год рождения', value: '28.02.1995', type: 'text'},
+            {title: 'Место жительства', value: 'г. Сызрань', type: 'text'},
+            {title: 'Скайп', value: 'vskuzmin28', type: 'text'},
+            {title: 'Почта', value: 'vskuzmin28@gmail.com', type: 'email'}
+          ]
+        })
+        // title & description
+        +title-desc({
+          class: 'document__title-desc',
+          title: 'Расскажите о себе чекбоксами',
+          description: 'Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.'
+        })
+
+        // skills
+        .list-body.document__list-body
+          +skills({
+            class: '',
+            items: [
+              {title: 'БЭМ/OOCSS', id: 'check1'},
+              {title: 'Pug (Jade)', id: 'check2'},
+              {title: 'Stylus/LESS/SASS', id: 'check3'},
+              {title: 'Работаю с SVG', id: 'check4'},
+              {title: 'Верстаю семантично', id: 'check5'},
+              {title: 'Accessibility (A11Y)', id: 'check6'},
+              {title: 'ES2015/ES2016', id: 'check7'},
+          ] 
+          })
+          +skills({
+            class: '',
+            items: [
+              {title: 'Webpack', id: 'check8'},
+              {title: 'Дружу с WebGL', id: 'check9'},
+              {title: 'jQuery', id: 'check10'},
+              {title: 'Знаю/изучаю Angular', id: 'check11'},
+              {title: 'Знаю/изучаю React', id: 'check12'},
+              {title: 'Знаю/изучаю Node.js', id: 'check13'},
+              {title: 'Использую Git', id: 'check14'},
+            ]
+          })
+          +skills({
+            class: '',
+            items: [
+              {title: 'С глазомером всё ок', id: 'check15'},
+              {title: 'Читаю <a class="link" href="#" title="">blog.csssr.ru</a>', id: 'check16'},
+              {title: 'Я ленивый(-ая)', id: 'check17'},
+              {title: 'У меня хороший английский', id: 'check18'}
+            ]
+          })
+
+        // title & description
+        +title-desc({
+          class: 'document__title-desc',
+          title: 'Уровень владения JavaScript'
+        })
+
+        // level
+        +level({
+          class: 'document__level'
+        })
+
+        // title & description
+        +title-desc({
+          class: 'document__title-desc',
+          title: 'Расскажите о себе словами',
+          description: 'Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.'
+        })
+
+        +about({
+          class: 'document__about',
+          text: 'Привлекла интересная работа'
+        })
+
+        // title & description
+        +title-desc({
+          class: 'document__title-desc',
+          title: 'Какие у вас планы на будущее?',
+          description: 'Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.'
+        })
+
+        // plan
+        +plan({
+          class: 'document__plan',
+          items: [
+            {title: 'Верстать', id: 'radio1'},
+            {title: 'Прокачиваться в JS', id: 'radio2'},
+            {title: 'Менеджерство', id: 'radio3'},
+            {title: 'Другое', id: 'radio4'}
+          ]
+        })
+
+        // date completion
+        +date-completion({
+          class: 'document__date',
+          items: [
+            {title: 'Дата заполнения', value: '15.05.19', type: 'text'}
+          ]
+        })
+
+
+    // scripts
+
+    script(src='../js/jquery-3.2.1.min.js')
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+    script(src='../js/scripts.js')

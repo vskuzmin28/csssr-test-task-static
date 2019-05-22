@@ -1,0 +1,6 @@
+mixin header(data)
+    - data = data || {};
+    .header(class = data.class)
+        a.header__logo(href = data.link, title = data.title)
+            img(src = data.src, alt = data.alt)
+        img.header__secret.secret(src="../img/secret.png" alt='@@')
